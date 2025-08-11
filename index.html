@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HN Studio｜記帳＆理財小幫手</title>
+  <meta name="description" content="HN Studio：簡單、私密、無廣告的記帳與理財試算工具。資料僅存裝置本機，支援 CSV 匯入/匯出與圓餅圖分析。">
+  <meta name="theme-color" content="#111827" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="HN Studio｜記帳＆理財小幫手">
+  <meta property="og:description" content="簡單、私密、無廣告的記帳與理財試算工具。資料僅存裝置本機。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/USER/REPO/main/app-promo.png">
+  <meta property="og:locale" content="zh_TW">
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#111827;
+      --muted:#9aa4b2;
+      --text:#e5e7eb;
+      --accent:#f59e0b;
+      --ring:#374151;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7fafc; --card:#ffffff; --muted:#4b5563; --text:#111827; --accent:#d97706; --ring:#e5e7eb;}
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      background:var(--bg); color:var(--text);
+    }
+    .container{max-width:1080px; margin:0 auto; padding:24px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+    .logo{
+      width:40px; height:40px; display:grid; place-items:center;
+      background:linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+      color:#111; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.25);
+      font-weight:900;
+    }
+    nav a{color:var(--muted); text-decoration:none; margin-left:16px}
+    nav a:hover{color:var(--text)}
+    .hero{
+      display:grid; gap:18px; padding:40px 0 24px;
+    }
+    .title{font-size:clamp(28px, 6vw, 44px); line-height:1.1; font-weight:800;}
+    .subtitle{color:var(--muted); font-size:clamp(15px, 3.2vw, 18px)}
+    .cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px}
+    .btn{
+      padding:12px 16px; border-radius:12px; text-decoration:none; color:#111;
+      background:linear-gradient(135deg, #fde68a 0%, #f59e0b 100%);
+      font-weight:700; box-shadow:0 6px 18px rgba(0,0,0,.25);
+    }
+    .btn.outline{
+      background:transparent; color:var(--text); border:1px solid var(--ring);
+      box-shadow:none;
+    }
+    .grid{display:grid; gap:16px; grid-template-columns:repeat(12, 1fr);}
+    .card{
+      background:var(--card); border:1px solid var(--ring); border-radius:16px; padding:18px;
+    }
+    .kicker{font-size:13px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase}
+    .feature{grid-column: span 12;}
+    @media(min-width:768px){ .feature{grid-column: span 4;} }
+    .feature h3{margin:6px 0 6px; font-size:18px}
+    .feature p{margin:0; color:var(--muted)}
+    footer{margin:36px 0 12px; color:var(--muted); font-size:14px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="./">
+        <div class="logo">HN</div>
+        <strong>HN Studio</strong>
+      </a>
+      <nav>
+        <a href="#features">功能特色</a>
+        <a href="privacy.html">隱私權政策</a>
+        <a href="mailto:aaa12583649@gmail.com">聯絡我們</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="kicker">記帳＆理財小幫手</div>
+      <h1 class="title">簡單、私密、無廣告的記帳與理財試算工具</h1>
+      <p class="subtitle">
+        所有資料只存在你的裝置（Hive 本機儲存）。支援 CSV 匯入/匯出、圓餅圖分析、逐月收入與固定支出管理，
+        還能用年化報酬率試算一次性與每月定期投入的成長。
+      </p>
+      <div class="cta">
+        <!-- 上線後把 # 換成實際 Play 連結 -->
+        <a class="btn" href="#">在 Google Play 取得</a>
+        <a class="btn outline" href="mailto:aaa12583649@gmail.com">技術支援：aaa12583649@gmail.com</a>
+      </div>
+    </section>
+
+    <section id="features" class="grid">
+      <article class="card feature">
+        <div class="kicker">隱私優先</div>
+        <h3>資料僅存本機</h3>
+        <p>不蒐集、不上傳、不分享；你擁有完整控制權。</p>
+      </article>
+      <article class="card feature">
+        <div class="kicker">效率</div>
+        <h3>極速記帳體驗</h3>
+        <p>快速輸入分類、金額、備註與時間；今日支出一目了然。</p>
+      </article>
+      <article class="card feature">
+        <div class="kicker">洞察</div>
+        <h3>圓餅圖分析</h3>
+        <p>每月支出占比清楚呈現，找出可優化的花費項目。</p>
+      </article>
+      <article class="card feature">
+        <div class="kicker">理財</div>
+        <h3>年化報酬率試算</h3>
+        <p>支援 4%–10% 年化、3/5/10 年期，一次性與每月定期投入都可估算。</p>
+      </article>
+      <article class="card feature">
+        <div class="kicker">彈性</div>
+        <h3>逐月收入 & 固定支出</h3>
+        <p>每個月份獨立設定收入與固定支出，真實反映生活變化。</p>
+      </article>
+      <article class="card feature">
+        <div class="kicker">匯入匯出</div>
+        <h3>CSV 備份/還原</h3>
+        <p>可將記錄匯出為 CSV，或從 CSV 匯入既有資料，掌握備份更安心。</p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <div class="kicker">支援</div>
+      <p style="margin:.4rem 0; color:var(--muted)">
+        需要協助或回饋建議？歡迎來信：
+        <a class="mono" style="color:inherit" href="mailto:aaa12583649@gmail.com">aaa12583649@gmail.com</a>
+      </p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> HN Studio · <a style="color:inherit" href="privacy.html">隱私權政策</a>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
